@@ -15,13 +15,11 @@ function add() {
   }
 }
 
-function total() {
-  let sum = 0;
+let sum = 0;
 
-  for (let amount of Object.values(data)) {
-    sum += amount;
-  }
-
-  document.getElementById("totalAmount").textContent =
-    "Total Spending: $" + sum;
+for (let amount of Object.values(data)) {
+  sum += amount;
 }
+
+document.getElementById("totalAmount").innerHTML =
+  "Total Spending: $" + sum;
