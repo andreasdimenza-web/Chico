@@ -13,4 +13,13 @@ function add() {
   for (let item of Object.entries(data).sort((a,b)=>b[1]-a[1])) {
     list.innerHTML += `<li>${item[0]}: $${item[1]}</li>`;
   }
+function total() {
+  let sum = 0;
+
+  for (let amount of Object.values(data)) {
+    sum += amount;
+  }
+
+  totalAmount.innerHTML = "Total Spending: $" + sum;
+}
 }
